@@ -1,9 +1,9 @@
-import FooterContent from "./footerContent";
+import Copyright from "./copyright";
 
-export default function Footer() {
+export default function FooterContent() {
     return (
         <footer>
-            <FooterContent/>
+            <Copyright/>
         </footer>
     )
 }

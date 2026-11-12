@@ -3,7 +3,7 @@ import NavigationBarContent from "./NavigationContent";
 
 export default function NavigationBar() {
     return (
-        <nav className="flex flex-row">
+        <nav className="flex justify-between items-center">
             <NavigationHero/>
             <NavigationBarContent/>
         </nav>
