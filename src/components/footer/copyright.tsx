@@ -4,7 +4,6 @@ import { useLanguage } from "@/components/language-provider";
 
 export default function Copyright() {
   const { t } = useLanguage();
-  const year = new Date().getFullYear();
 
-  return <p className="footer-copyright">© {year} RambAI. {t("copyright")}</p>;
+  return <p className="m-0">© 2026 RambAI. {t("copyright")}</p>;
 }
