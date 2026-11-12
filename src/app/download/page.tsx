@@ -1,7 +1,5 @@
-export default function Download() {
-    return (
-        <main>
-            <h1>Download Page</h1>
-        </main>
-    )
+import DownloadContent from "@/components/download/download";
+
+export default function DownloadPage() {
+  return <DownloadContent />;
 }

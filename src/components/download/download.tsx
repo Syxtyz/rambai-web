@@ -21,7 +21,7 @@ export default function DownloadContent() {
               <p className="text-[0.83rem] leading-normal text-[#756766]">{t("apkFormat")}</p>
             </div>
           </div>
-          <a className="inline-flex min-h-12.25 items-center justify-center gap-2.5 rounded-[13px] bg-[#b51f28] px-4.75 text-[0.9rem] font-bold text-white shadow-[0_9px_18px_rgba(142,24,32,0.18)] transition hover:-translate-y-0.5 hover:bg-[#8e1820]" href="/assets/app-release/app-release.apk" download="RambAI.apk">
+          <a className="inline-flex min-h-12.25 items-center justify-center gap-2.5 rounded-[13px] bg-[#b51f28] px-4.75 text-[0.9rem] font-bold text-white shadow-[0_9px_18px_rgba(142,24,32,0.18)] transition hover:-translate-y-0.5 hover:bg-[#8e1820]" href="/assets/app-release/RambAI.zip" download="RambAI.zip">
             {t("downloadApk")} <span className="text-[1.05rem]" aria-hidden="true">↓</span>
           </a>
         </section>
