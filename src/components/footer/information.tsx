@@ -1,8 +1,15 @@
+"use client";
+
+import Link from "next/link";
+import { useLanguage } from "@/components/language-provider";
+
 export default function LegalInformation() {
-    return (
-        <div>
-            <a>Privacy Policies</a>
-            <a>Terms of Service</a>
-        </div>
-    )
+  const { t } = useLanguage();
+
+  return (
+    <nav className="footer-links" aria-label="Legal information">
+      <Link href="/terms">{t("terms")}</Link>
+      <Link href="/privacy">{t("privacy")}</Link>
+    </nav>
+  );
 }

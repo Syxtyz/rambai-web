@@ -1,10 +1,10 @@
-import { cacheLife } from "next/cache"
+"use client";
 
-export default async function Copyright() {
-  "use cache"
-  cacheLife("days")
+import { useLanguage } from "@/components/language-provider";
 
-  const year = new Date().getFullYear()
+export default function Copyright() {
+  const { t } = useLanguage();
+  const year = new Date().getFullYear();
 
-  return <p className="text-sm text-muted-foreground">© {year} RambAI. All rights reserved.</p>
+  return <p className="footer-copyright">© {year} RambAI. {t("copyright")}</p>;
 }
