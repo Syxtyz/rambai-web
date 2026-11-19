@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "@/components/language-provider";
 
 const eyebrowClass = "inline-flex items-center gap-[9px] text-[0.75rem] font-extrabold tracking-[0.13em] text-[#b51f28] uppercase before:h-0.5 before:w-5 before:rounded-full before:bg-current before:content-['']";
@@ -43,9 +44,7 @@ function AppPreview() {
       <div className="absolute -z-10 aspect-square w-[min(430px,92%)] rounded-full bg-[radial-gradient(circle,#f5d8d5_0%,rgba(245,216,213,0.5)_53%,rgba(245,216,213,0)_73%)]" />
       <div className="w-[min(330px,82%)] rotate-2 rounded-[29px] border border-white/85 bg-[#fffdfc] p-[17px] shadow-[0_28px_70px_rgba(81,39,38,0.17),0_3px_12px_rgba(81,39,38,0.06)] max-[620px]:w-[min(325px,84%)]">
         <div className="flex items-center gap-[9px] px-px pt-px pb-[14px]">
-          <span className="grid size-[29px] place-items-center rounded-[9px] bg-[#b51f28] text-white" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 25 25" fill="none"><circle cx="10.8" cy="10.8" r="6.3" stroke="white" strokeWidth="2.5" /><path d="m15.4 15.4 5.1 5.1" stroke="white" strokeWidth="2.5" strokeLinecap="round" /><circle cx="10.8" cy="10.8" r="2.1" fill="white" /></svg>
-          </span>
+          <Image src="/assets/images/logo.png" alt="RambAI" width={29} height={29} className="size-[29px] rounded-[9px] object-cover" />
           <span><span className="block text-[0.76rem] font-extrabold">RambAI</span><span className="mt-0.5 block text-[0.53rem] font-bold text-[#b51f28]">Rambutan Grading</span></span>
         </div>
         <div className="relative min-h-[157px] overflow-hidden rounded-[19px] bg-[radial-gradient(ellipse_at_90%_85%,rgba(255,211,151,0.64),transparent_36%),linear-gradient(135deg,#ba2029,#a51b24)] p-[19px] text-white after:absolute after:right-[11px] after:-bottom-[17px] after:size-[116px] after:rounded-full after:border-[13px] after:border-dotted after:border-[#d84232] after:bg-[radial-gradient(ellipse,#f1c59a_0_33%,#e8a779_35%_45%,transparent_47%)] after:opacity-90 after:shadow-[inset_0_0_0_8px_rgba(244,176,117,0.25)] after:content-['']">
@@ -66,16 +65,18 @@ function GradeFilter() {
   const { t } = useLanguage();
   const grades = [
     { icon: "✓", label: t("categoryAll"), active: true },
-    { icon: "✦", label: t("classI"), active: false },
-    { icon: "✦", label: t("classII"), active: false },
-    { icon: "⌕", label: t("reject"), active: false },
+    { image: "/assets/images/class%20I.png", label: t("classI"), active: false },
+    { image: "/assets/images/class%20II.png", label: t("classII"), active: false },
+    { image: "/assets/images/reject.png", label: t("reject"), active: false },
   ];
 
   return (
     <div className="my-[15px] mx-0.5 grid grid-cols-4 gap-2 mb-[14px]" aria-label="Grading categories">
       {grades.map((grade) => (
         <div className={`flex min-h-[47px] flex-col items-center justify-center gap-1 rounded-xl text-[0.5rem] font-semibold ${grade.active ? "bg-[#f9e4e2] text-[#b51f28]" : "bg-[#fbf5f4] text-[#7b6a68]"}`} key={grade.label}>
-          <span className="grid size-[19px] place-items-center rounded-full bg-white text-[0.65rem] text-[#b51f28]">{grade.icon}</span>
+          <span className="grid size-[19px] place-items-center rounded-full bg-white text-[0.65rem] text-[#b51f28]">
+            {grade.image ? <Image src={grade.image} alt="" width={18} height={18} className="size-[18px] object-contain" /> : grade.icon}
+          </span>
           {grade.label}
         </div>
       ))}
