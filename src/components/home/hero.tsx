@@ -26,10 +26,6 @@ export default function HomeHero() {
             {t("learnAbout")}
           </Link>
         </div>
-        <div className="mt-[37px] flex items-center gap-[11px] text-[0.83rem] text-[#756766] max-[620px]:mt-6">
-          <span className="grid size-[25px] place-items-center rounded-full bg-[#e2f4e9] text-[0.78rem] font-black text-[#168a55]" aria-hidden="true">✓</span>
-          <span>{t("quickResults")}</span>
-        </div>
       </div>
       <AppPreview />
     </section>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/components/language-provider";
+import HowItWorks from "./how-it-works";
 
 export default function DownloadContent() {
   const { t } = useLanguage();
@@ -13,7 +14,7 @@ export default function DownloadContent() {
           <h1 className="my-4.75 max-w-167.5 text-[clamp(2.6rem,5.2vw,4rem)] leading-[0.99] font-extrabold tracking-[-0.065em] max-[620px]:text-[clamp(2.6rem,11vw,3.6rem)]">{t("downloadTitle")}</h1>
           <p className="max-w-140 text-[1.06rem] leading-[1.8] text-[#756766]">{t("downloadDescription")}</p>
         </header>
-        <section className="flex w-fit max-w-full items-center justify-between gap-16 rounded-[20px] border border-[#efd2cf] bg-[linear-gradient(115deg,#fff8f7,#f6e3e0)] p-6.25 max-[620px]:w-full max-[620px]:flex-col max-[620px]:items-start" aria-label={t("androidApp")}>
+        <section className="flex mb-10 w-fit max-w-full items-center justify-between gap-16 rounded-[20px] border border-[#efd2cf] bg-[linear-gradient(115deg,#fff8f7,#f6e3e0)] p-6.25 max-[620px]:w-full max-[620px]:flex-col max-[620px]:items-start" aria-label={t("androidApp")}>
           <div className="flex items-center gap-4.25">
             <span className="grid size-13 shrink-0 place-items-center rounded-2xl bg-[#b51f28] text-[1.35rem] font-extrabold text-white" aria-hidden="true">A</span>
             <div>
@@ -25,6 +26,7 @@ export default function DownloadContent() {
             {t("downloadApk")} <span className="text-[1.05rem]" aria-hidden="true">↓</span>
           </a>
         </section>
+        <HowItWorks />
       </div>
     </div>
   );
