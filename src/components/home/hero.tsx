@@ -22,9 +22,6 @@ export default function HomeHero() {
           <Link className={primaryButtonClass} href="/download">
             {t("getApp")} <span className="text-[1.05rem]" aria-hidden="true"></span>
           </Link>
-          <Link className="inline-flex min-h-[49px] items-center justify-center gap-2.5 rounded-[13px] border border-[#eadbd8] bg-[#fffdfc]/70 px-[19px] text-[0.9rem] font-bold text-[#29201f] transition hover:-translate-y-0.5 hover:bg-[#fffdfc]" href="/about">
-            {t("learnAbout")}
-          </Link>
         </div>
       </div>
       <AppPreview />

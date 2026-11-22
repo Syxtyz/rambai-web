@@ -9,7 +9,6 @@ export default function NavigationBarContent() {
   const { language, setLanguage, t } = useLanguage();
   const links = [
     { href: "/", label: "Home" },
-    { href: "/about", label: t("about") },
     { href: "/download", label: t("download") },
   ];
 
