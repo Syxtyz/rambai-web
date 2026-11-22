@@ -55,8 +55,8 @@ export default function WhatsNewContent() {
   const { t } = useLanguage();
 
   return (
-    <div className="relative overflow-hidden bg-[#fffdf8] py-20 pb-28 max-[620px]:py-12 max-[620px]:pb-20">
-      <div className="pointer-events-none absolute -top-36 right-[-10rem] size-[28rem] rounded-full bg-[#f8d9d5]/40 blur-3xl" aria-hidden="true" />
+    <div className="relative overflow-hidden py-20 pb-28 max-[620px]:py-12 max-[620px]:pb-20">
+      <div className="pointer-events-none absolute -top-36 right-[-10rem] size-[28rem] rounded-full blur-3xl" aria-hidden="true" />
       <div className="relative mx-auto w-[min(1120px,calc(100%-48px))] max-[620px]:w-[min(100%-34px,480px)]">
         <header className="mb-14 max-w-3xl max-[620px]:mb-9">
           <h1 className="mb-5 max-w-3xl text-[clamp(2.8rem,6vw,4.6rem)] leading-[0.96] font-extrabold tracking-[-0.07em] text-[#3d1f20] max-[620px]:text-[clamp(2.7rem,12vw,4rem)]">{t("whatsNewTitle")}</h1>
