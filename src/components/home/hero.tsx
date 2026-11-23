@@ -20,7 +20,7 @@ export default function HomeHero() {
         <p className="max-w-[560px] text-[1.06rem] leading-[1.8] text-[#756766] max-[620px]:text-[0.98rem]">{t("homeDescription")}</p>
         <div className="mt-[31px] flex flex-wrap gap-3">
           <Link className={primaryButtonClass} href="/download">
-            {t("getApp")} <span className="text-[1.05rem]" aria-hidden="true"></span>
+            {t("getApp")}
           </Link>
         </div>
       </div>
