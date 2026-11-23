@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/components/language-provider";
 import HowItWorks from "./how-it-works";
+import SystemRequirements from "./system-requirements";
 
 export default function DownloadContent() {
   const { t } = useLanguage();
@@ -26,6 +27,7 @@ export default function DownloadContent() {
             {t("downloadApk")} <span className="text-[1.05rem]" aria-hidden="true">↓</span>
           </a>
         </section>
+        <SystemRequirements />
         <HowItWorks />
       </div>
     </div>
