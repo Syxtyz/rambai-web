@@ -29,8 +29,6 @@ export default function SystemRequirements() {
           </article>
         ))}
       </div>
-
-      <p className="mt-5 text-[0.88rem] leading-[1.7] text-[#756766]">{t("systemHardwareNote")}</p>
     </section>
   );
 }
